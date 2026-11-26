@@ -1,0 +1,18 @@
+[
+  {"t": 1.64, "sfx": "ding", "db": -3},
+  {"t": 5.60, "sfx": "whoosh", "db": -5},
+  {"t": 12.20, "sfx": "whoosh", "db": -6},
+  {"t": 13.96, "sfx": "typing", "db": -6},
+  {"t": 17.20, "sfx": "heart", "db": -3},
+  {"t": 19.10, "sfx": "whoosh", "db": -5},
+  {"t": 23.44, "sfx": "impact", "db": -7},
+  {"t": 29.04, "sfx": "ping", "db": -2},
+  {"t": 34.66, "sfx": "heart", "db": -4},
+  {"t": 35.80, "sfx": "sparkle", "db": -4},
+  {"t": 49.84, "sfx": "typing", "db": -5},
+  {"t": 55.60, "sfx": "click", "db": -2},
+  {"t": 55.70, "sfx": "success", "db": -4},
+  {"t": 56.10, "sfx": "whoosh", "db": -5},
+  {"t": 64.50, "sfx": "chime", "db": -4},
+  {"t": 68.08, "sfx": "sparkle", "db": -5}
+]

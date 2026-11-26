@@ -5,7 +5,7 @@ export type Look = {
 };
 export type Arms = "down" | "up" | "hold" | "point" | "head" | "chest" | "box" | "shrug";
 export type Pose = {
-  t: number; walk?: number /* phase radians */; speed?: number /* 0..1 stride amplitude */; mood?: "grin" | "smile" | "shock" | "deadpan" | "worry" | "angry" | "laugh" | "gulp";
+  t: number; walk?: number /* phase radians */; speed?: number /* 0..1 stride amplitude */; mood?: "grin" | "smile" | "shock" | "deadpan" | "worry" | "angry" | "laugh" | "gulp" | "sleep";
   arms?: Arms; armK?: number; armR?: [number, number]; armL?: [number, number]; armRK?: number; armLK?: number; /* IK hand targets in puppet-height units: x from body centre (screen right +), y from feet up */ nerv?: number; sweat?: number; squash?: number; tilt?: number; lookX?: number; flip?: boolean; hunch?: number; air?: number;
 };
 export const INK = "#0b0d1a";
@@ -105,6 +105,7 @@ export function drawPuppet(c: CanvasRenderingContext2D, W: number, H: number, lo
   const dartX = (nerv ? Math.sin(p.t * 0.33) * 6 * S * nerv : 0) + (p.lookX ?? 0) * 7 * S;
   const eye = (ex: number) => {
     if (m === "grin" || m === "laugh") { c.beginPath(); c.arc(ex, eyeY + 9 * S, 16 * S, Math.PI * 1.1, Math.PI * 1.9); c.stroke(); return; }
+    if (m === "sleep") { c.beginPath(); c.arc(ex, eyeY - 4 * S, 15 * S, 0.15 * Math.PI, 0.85 * Math.PI); c.stroke(); return; }
     if (blink) { c.beginPath(); c.moveTo(ex - 14 * S, eyeY); c.lineTo(ex + 14 * S, eyeY); c.stroke(); return; }
     const r = m === "shock" ? 23 * S : 14.5 * S; c.fillStyle = "#fff"; c.beginPath(); c.arc(ex, eyeY, r, 0, 7); c.fill(); c.stroke();
     c.fillStyle = INK; c.beginPath(); c.arc(ex + dartX, eyeY + 1, m === "shock" ? 4.5 * S : 5.8 * S, 0, 7); c.fill();

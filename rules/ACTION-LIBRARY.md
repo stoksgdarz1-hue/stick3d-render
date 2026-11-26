@@ -28,3 +28,4 @@ Add every new pose/prop here with its pose-param names and the scene where first
 - kit.tsx: `Lights` (4-point warm/cool + rim), `SceneFog` (depth separation).
 - Main.tsx: subtle cinematic vignette overlay in `Scene`.
 - explainer.tsx: `HoloCard`, `Callout`, `StatMeter`, `SignalArc`, `StreetBackdrop`.
+- puppet.ts: `mood: "sleep"` added (peaceful curved closed eyes + gentle smile) for `DuaDunia.tsx` S8.
