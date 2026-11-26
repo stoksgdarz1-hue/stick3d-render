@@ -1,0 +1,18 @@
+# Dependencies & build caches
+node_modules/
+engine/node_modules/
+engine/.remotion/
+engine/build/
+engine/dist/
+
+# Rendered outputs & heavy video exports
+*.mp4
+!examples/**/*.mp4
+99-exports/
+
+# OS / Python / Editor
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+ENV-REPORT.md
